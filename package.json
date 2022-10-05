@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nenebeji/RoboTech-Blog/issues"
   },
-  "homepage": "https://github.com/nenebeji/RoboTech-Blog#readme"
+  "homepage": "https://github.com/nenebeji/RoboTech-Blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1"
+  }
 }
