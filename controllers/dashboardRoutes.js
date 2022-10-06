@@ -79,3 +79,5 @@ router.get('/create', (req, res) => {
         logged_in: true
     })
 })
+
+module.exports = router;
