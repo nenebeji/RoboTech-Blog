@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 });
 
 
-// Get specific api/user/:id
+// Get specific api/users/:id
 router.get('/:id', async (req, res) => {
    try {const userData = await User.findByPk(req.params.id, {
             attributes: {
