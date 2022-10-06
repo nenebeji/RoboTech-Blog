@@ -1,0 +1,14 @@
+<div class="card mb-4 fullpost">
+   <a href="/post/{{id}}" class="links">
+   <div class="card-header">
+   Posted by {{user.username}}
+  </div></a>
+  <div class="card-body text-bg-dark postbody">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{content}}</p>
+    <a href="/post/{{id}}" class="btn btn-primary">Go to post</a>
+  </div>
+  <div class="card-footer text">
+   Date created {{formatDate date_created}}
+  </div>
+</div>

@@ -1,6 +1,18 @@
+main {
+    margin: 2%;
+}
+
 h1 {
     /* font-family: 'Nunito', sans-serif; */
     font-family: 'PT-Sans', sans-serif;
     line-height: 1;
 }
 
+/* .postbody {
+    border: solid black;
+} */
+
+a {
+    text-decoration: none;
+    color: black;
+}
