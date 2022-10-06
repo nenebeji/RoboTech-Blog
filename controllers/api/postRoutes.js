@@ -6,21 +6,20 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const postData = Post.findAll({
-            attributes: {
-                order: [['date_created', 'DESC']],
-                include: [{
+            order: [['date_created', 'DESC']],
+            include: [{
+                model: User,
+                attributes: ['username']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'text', 'date_created', 'user_id', 'post_id'],
+                include: {
                     model: User,
                     attributes: ['username']
-                },
-                {
-                    model: Comment,
-                    attributes: ['id', 'text', 'date_created', 'user_id', 'post_id'],
-                    include: {
-                        model: User,
-                        attributes: ['username']
-                    }
-                }],
-            }
+                }
+            }],
+            
         })
         res.status(200).json(postData)
     } catch (err) {
@@ -32,20 +31,18 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const postData = Post.findByPk(req.params.id, {
-            attributes: {
-                include: [{
+            include: [{
+                model: User,
+                attributes: ['username']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'text', 'date_created', 'user_id', 'post_id'],
+                include: {
                     model: User,
                     attributes: ['username']
-                },
-                {
-                    model: Comment,
-                    attributes: ['id', 'text', 'date_created', 'user_id', 'post_id'],
-                    include: {
-                        model: User,
-                        attributes: ['username']
-                    }
-                }],
-            }
+                }
+            }],
         })
         if(!postData) {
             res.status(404).json({message: 'No post found with this id'});
