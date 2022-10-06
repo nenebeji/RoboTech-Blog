@@ -1,0 +1,9 @@
+  <div class="card-body comments">
+    {{#each this}}
+    <section class="comment">
+        <blockquote class="blockquote mb-0">
+            <p>{{text}}</p>
+            <footer class="blockquote-footer">{{user.username}} on<cite title="Date created">{{formatDate date_created}}</cite></footer>
+        </blockquote>
+    </section>
+  </div>
