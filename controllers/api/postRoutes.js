@@ -5,7 +5,8 @@ const withAuth = require('../../utils/auth');
 // Get all /api/posts
 router.get('/', async (req, res) => {
     try {
-        const postData = Post.findAll({
+        const postData = await Post.findAll({
+            attributes: ['id', 'title', 'content', 'date_created'],
             order: [['date_created', 'DESC']],
             include: [{
                 model: User,
@@ -30,7 +31,9 @@ router.get('/', async (req, res) => {
 // Get a single /api/posts
 router.get('/:id', async (req, res) => {
     try {
-        const postData = Post.findByPk(req.params.id, {
+        const postData = await Post.findByPk(req.params.id, {
+            attributes: ['id', 'title', 'content', 'date_created'],
+            // order: [['date_created', 'DESC']],
             include: [{
                 model: User,
                 attributes: ['username']
@@ -43,12 +46,13 @@ router.get('/:id', async (req, res) => {
                     attributes: ['username']
                 }
             }],
+            
         })
-        if(!postData) {
-            res.status(404).json({message: 'No post found with this id'});
+        if (!postData) {
+            res.status(404).json({ message: 'No post found with this id!' });
             return;
         }
-        res.status(200).json(userData)
+        res.status(200).json(postData)
     } catch (err) {
         res.status(500).json(err);
     }

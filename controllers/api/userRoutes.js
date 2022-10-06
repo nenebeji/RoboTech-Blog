@@ -4,7 +4,7 @@ const { User, Comment, Post } = require('../../models');
 // Get all /api/users
 router.get('/', async (req, res) => {
     try {
-        const userData = User.findAll({
+        const userData = await User.findAll({
             attributes: {
               exclude: ['password']
             }
