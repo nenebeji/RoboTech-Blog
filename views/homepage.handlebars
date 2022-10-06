@@ -1,0 +1,9 @@
+<div>
+{{#each posts as |post|}}
+
+{{> post-info post }}
+</div>
+
+{{else}}
+<p class="fs-1">There are currently no posts</p>
+{{/each}}
