@@ -1,0 +1,21 @@
+<a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
+
+<section class="editpost-page">
+    <h2 class="Editheading">Edit post</h2>
+    <form>
+        <div class="input-group mb-3">
+            <label for="post-title">Title</label>
+            <input type="text" class="form-control" id="post-title" name="post-title" value="{{post.title}}">
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Content" id="floatingTextarea2 post-content" name="post-content" style="height: 100px">{{post.content}}</textarea>
+            <label for="post-content">Content</label>
+        </div> 
+        <button type="submit" class="btn btn-primary" id="update-btn">Update</button><button type="button" class="btn btn-primary" id="delete-btn">Delete</button>
+    </form>
+</section>
+
+{{#if loggen_in}}
+<script src="/js/updatePost"></script>
+<script src="/js/deletePost"></script>
+{{/if}}
