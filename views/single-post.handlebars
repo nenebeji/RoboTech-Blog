@@ -1,9 +1,9 @@
 {{> post-info post}}
 
 {{#if logged_in}}
-<div class="mb-3 comment-form">
-  <label for="exampleFormControlTextarea1" class="form-label">Comment Below:</label>
-  <textarea class="form-control comment-body" id="exampleFormControlTextarea1" rows="3"></textarea>
+<div class="form-floating" id="comment-form">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Comments</label>
 </div>
 <div>
     <button type="submit" class="btn btn-primary btn-lg">Add Comment</button>
