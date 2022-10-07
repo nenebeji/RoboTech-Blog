@@ -1,13 +1,16 @@
 {{> post-info post}}
 
 {{#if logged_in}}
-<div class="form-floating" id="comment-form">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-  <label for="floatingTextarea2">Comments</label>
-</div>
-<div>
+<form class="comment-form">
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="comment-text" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">Comments</label>
+  </div>
+  <div>
     <button type="submit" class="btn btn-primary btn-lg">Add Comment</button>
-</div>
+  </div> 
+</form>
+
 {{/if}}
 
 {{> comments post.comments}}
