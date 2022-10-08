@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: process.env.SESS_SECRET,
+  secret: 'secret',
   cookie: {
     // session expires in 10 minutes
     expires: 10 * 60 * 1000
