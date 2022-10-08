@@ -58,6 +58,7 @@ localhost:3001/
 
 ## Tests
 
+Tests were run using insomnia.
 
 ## Questions
 
