@@ -70,7 +70,7 @@ Email: nenebeji@gmail.com
 
 ## References
 
-Github Repo: https://github.com/nenebeji/Notebook
+Github Repo: https://github.com/nenebeji/RoboTech-Blog
 
 ## License
 
