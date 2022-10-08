@@ -55,6 +55,7 @@ a {
 
 #commbtn {
     margin-top: 15px;
+    margin-left: 10px;
 }
 
 .postinfo {
@@ -88,6 +89,6 @@ a {
     margin-left: 20px;
 }
 
-.commentform {
+.addcomment {
     margin: 0px 10px 0px 10px;
 }
