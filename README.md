@@ -5,26 +5,46 @@
 ## Table of Contents
 
 - [Project Description](#project-description)
+
   - [Problems Solved](#problems-solved)
+
+- [Screenshots](#screenshots)
+
 - [Installation](#installation)
+
 - [Usage](#usage)
+
 - [How to Contribute](#how-to-contribute)
+
 - [Tests](#test)
+
 - [Questions](#questions)
+
 - [References](#references)
+
 - [License](#license)
 
 ## Project Description
 
+This is a CMS style blog post application that allows a user to publish articles, blog post, view and comment on previous posts, and publish their thoughts and opinion.
 
 ### Problems Solved
 
+* Corrected the paths: the biggest challenge was fetch requests. Sometimes had to change the variable name to match the model variable name. Also some of the names of the file path were incorrect. There also a lot of unnecessary spacing that gave my code some problems.
+
+## Screenshots
+
+![App Image](/public/images/blogimage.png)
+> Landing Page
 
 ## Installation
 
+Run  $ npm install to install all dependencies.
 
 ## Usage
 
+Run $ npm start to start the application. 
+localhost:3001/
 
 ## How to Contribute
 
@@ -50,6 +70,7 @@ Email: nenebeji@gmail.com
 
 ## References
 
+Github Repo: https://github.com/nenebeji/Notebook
 
 ## License
 
