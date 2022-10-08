@@ -1,5 +1,6 @@
+<article class="postinfo">
 {{> post-info post}}
-
+<br>
 {{#if logged_in}}
 <form class="comment-form">
   <div class="form-floating">
@@ -7,14 +8,17 @@
     <label for="floatingTextarea2">Comments</label>
   </div>
   <div>
-    <button type="submit" class="btn btn-primary btn-lg">Add Comment</button>
+    <button type="submit" class="btn btn-primary btn-lg" id="commbtn">Add Comment</button>
   </div> 
 </form>
-
 {{/if}}
-
+<br> 
+<h4 class="commhead">Previous Comments</h4>
+<div class="commcont">
 {{> comments post.comments}}
+</div>
 
 {{#if logged_in}}
 <script src="/js/comment.js"></script>
 {{/if}}
+</article>

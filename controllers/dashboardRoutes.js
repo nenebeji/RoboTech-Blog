@@ -55,11 +55,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
             }
           ],
         });
-        if (!postData) {
-            res.status(404).json({ message: 'No post found with this id!' });
-            return;
-        }
-        res.status(200).json(postData);
     
         // Serialize data so the template can read it
         const post = postData.get({ plain: true });

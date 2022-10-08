@@ -66,6 +66,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
+    // Find the user who matches the posted username
     const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
@@ -75,7 +76,8 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword =  await userData.checkPassword(req.body.password);
+    // Verify the posted password with the password store in the database
+    const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -84,15 +86,16 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    // Create session variables based on the logged in user
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.username = userData.username;
       req.session.logged_in = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -102,7 +105,8 @@ router.post('/logout', (req, res) => {
     req.session.destroy(() => {
       res.status(204).end();
     });
-  } else {
+  }
+  else {
     res.status(404).end();
   }
 });

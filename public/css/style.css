@@ -2,6 +2,30 @@ main {
     margin: 2%;
 }
 
+header {
+    background-color: #fccd04;
+    /* padding: 5% 0% 0% 0%; */
+}
+
+/* .navbar {
+    background-color: #BEBEBE;
+} */
+
+body{
+    content: "";
+    background-image: url("../images/techbackground.jpeg");
+    background-color: #9f91de;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.99;
+}
+
 h1 {
     /* font-family: 'Nunito', sans-serif; */
     font-family: 'PT-Sans', sans-serif;
@@ -15,4 +39,51 @@ h1 {
 a {
     text-decoration: none;
     color: black;
+}
+
+.loginbtn{
+    margin-top: 15px;
+}
+
+.commcont {
+    margin: 15px;
+}
+
+.comment {
+    margin-top: 10px;
+}
+
+#commbtn {
+    margin-top: 15px;
+}
+
+.postinfo {
+    border: none;
+}
+
+.createheading {
+    margin: 5 0 5 0;
+}
+
+#post-title {
+    margin-left: 10px;
+}
+
+#create-btn, #update-btn {
+    margin-top: 15px;
+}
+
+#edit-post {
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+#delete-btn {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.commhead {
+    margin-left: 20px;
 }

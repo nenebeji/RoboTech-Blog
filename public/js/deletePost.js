@@ -7,11 +7,11 @@ const delButtonHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/user-dashboard');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to delete post');
       }
     }
 };
 
-document.querySelector('.delete-btn').addEventListener('click', delButtonHandler);
+document.querySelector('#delete-btn').addEventListener('click', delButtonHandler);

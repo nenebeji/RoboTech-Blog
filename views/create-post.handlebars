@@ -1,18 +1,19 @@
 <a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
-
+<br>
 <section class="createpost-page">
     <h2 class="createheading">Create a new Blog post</h2>
+    <br>
     <form class="new-post-form">
         <div class="input-group mb-3">
-            <label for="post-title">Title</label>
+            <label for="post-title" id="titletext"><h5>Title</h5></label>
             <input type="text" class="form-control" id="post-title" name="post-title">
         </div>
         <div class="form-floating">
-            <textarea class="form-control post-content" placeholder="Content" id="floatingTextarea2" name="post-content" style="height: 100px"></textarea>
+            <input type="text" class="form-control" placeholder="Content" id="post-content" name="post-content" style="height: 100px"></textarea>
             <label for="post-content">Content</label>
         </div> 
         <button type="submit" class="btn btn-primary" id="create-btn">Submit</button>
     </form>
 </section>
 
-<script src="/js/createPost"></script>
+<script src="/js/createPost.js"></script>
