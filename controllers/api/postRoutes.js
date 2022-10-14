@@ -76,7 +76,7 @@ router.post('/', withAuth, async (req, res) => {
 
 //Update Post
 router.put('/:id', withAuth, async (req, res) => {
-    // update a category by its `id` value
+    // update a Post by its `id` value
     try {
       const postData = await Post.update(req.body, {
         where: {
@@ -84,7 +84,7 @@ router.put('/:id', withAuth, async (req, res) => {
         },
       });
       if (!postData[0]) {
-        res.status(404).json({ message: 'No Category with this id!' });
+        res.status(404).json({ message: 'No Post with this id!' });
         return;
       }
       res.status(200).json(postData);
